@@ -54,4 +54,5 @@ sites/simpletest
 composer.json
 composer.lock
 core/
+sites/
 example.gitignore
