@@ -1,10 +1,10 @@
 name: Playpoi
 type: theme
 base theme: classy
-description: 'A flexible, recolorable theme with many regions and a responsive, mobile-first layout.'
-package: Core
-# version: VERSION
-# core: 8.x
+description: 'A flexible, recolorable theme with many regions and a responsive, mobile-first layout. Above all else a theme that ROCKS the poi community.'
+package: Custom
+version: 8.x-0.0.1
+core: 8.x
 libraries:
   - bartik/global-styling
 ckeditor_stylesheets:
