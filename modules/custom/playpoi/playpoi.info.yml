@@ -1,0 +1,6 @@
+name: playpoi
+type: module
+description: Site specific customizations for playpoi.com
+core: 8.x
+package: Other
+
