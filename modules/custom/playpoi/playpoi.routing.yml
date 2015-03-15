@@ -1,0 +1,8 @@
+playpoi.default_controller_hello:
+  path: '/playpoi/hello/{name}'
+  defaults:
+    _controller: '\Drupal\playpoi\Controller\DefaultController::hello'
+    _title: 'playpoi Title'
+  requirements:
+    _permission: 'access content'
+
