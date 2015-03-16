@@ -2,12 +2,12 @@
 
 /**
  * @file
- * Lists available colors and color schemes for the Bartik theme.
+ * Lists available colors and color schemes for the Playpoi theme.
  */
 
 // Put the logo path into JavaScript for the live preview.
-$js_attached['#attached']['drupalSettings']['color']['logo'] = theme_get_setting('logo.url', 'bartik');
-drupal_render($js_attached);
+$js_attached['#attached']['drupalSettings']['color']['logo'] = theme_get_setting('logo.url', 'playpoi');
+drupal_process_attached($js_attached);
 
 $info = array(
   // Available colors and color labels used in theme.
@@ -103,7 +103,7 @@ $info = array(
 
   // Files to copy.
   'copy' => array(
-    'logo.png',
+    'logo.svg',
   ),
 
   // Gradient definitions.
@@ -119,6 +119,6 @@ $info = array(
   ),
 
   // Preview files.
-  'preview_library' => 'bartik/color.preview',
+  'preview_library' => 'playpoi/color.preview',
   'preview_html' => 'color/preview.html',
 );

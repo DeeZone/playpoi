@@ -1,16 +1,12 @@
-/**
- * @file
- * Approximate Bartik's style in CKEditor instances on the Drupal back-end.
- */
-
 /* -------------- Captions -------------- */
-
+.caption {
+  margin-bottom: 1.2em;
+}
 .caption > * {
   background: #F3F3F3;
   padding: 0.5ex;
   border: 1px solid #CCC;
 }
-
 .caption > figcaption {
   border: 1px solid #CCC;
   border-top: none;
@@ -19,7 +15,7 @@
   text-align: center;
 }
 
-/* Override Bartik's default blockquote and pre styles when captioned. */
+/* Override Playpois default blockquote and pre styles when captioned. */
 .caption-pre > pre,
 .caption-blockquote > blockquote {
   margin: 0;
@@ -28,7 +24,7 @@
   content: "— ";
 }
 .caption-blockquote > figcaption {
-  text-align: left;
+  text-align: left; /* LTR */
 }
 [dir="rtl"] .caption-blockquote > figcaption {
   text-align: right;

@@ -1,18 +1,18 @@
-bartik.mobile:
+playpoi.mobile:
   label: mobile
-  mediaQuery: '(min-width: 0px)'
-  weight: 0
+  mediaQuery: ''
+  weight: 2
   multipliers:
     - 1x
-bartik.narrow:
+playpoi.narrow:
   label: narrow
   mediaQuery: 'all and (min-width: 560px) and (max-width: 850px)'
   weight: 1
   multipliers:
     - 1x
-bartik.wide:
+playpoi.wide:
   label: wide
   mediaQuery: 'all and (min-width: 851px)'
-  weight: 2
+  weight: 0
   multipliers:
     - 1x
