@@ -6,6 +6,7 @@
  */
 
 use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Entity\EntityInterface;
 
 /**
  * Implements hook_help().
@@ -27,7 +28,20 @@ function playpoi_help($route_name, RouteMatchInterface $route_match) {
  * Implements hook_theme().
  */
 function playpoi_theme() {
-  $theme = [];
+//  $theme = [];
+  $theme = array();
 
   return $theme;
+}
+
+/**
+ * Implements hook_theme().
+ */
+function playpoi_entity_update(EntityInterface $entity) {
+
+
+  echo 'Entity: ' . print_r($entity, TRUE), PHP_EOL;
+  // exit;
+
+  
 }
