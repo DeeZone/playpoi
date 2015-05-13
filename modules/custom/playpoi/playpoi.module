@@ -39,9 +39,44 @@ function playpoi_theme() {
  */
 function playpoi_entity_update(EntityInterface $entity) {
 
+  $entity_address = $entity->getTranslation('x-default')->get('field_address')->getValue();
+  $address = $entity_address[0]['value'];
 
-  echo 'Entity: ' . print_r($entity, TRUE), PHP_EOL;
-  // exit;
+  // Forward Geocoding
+  // https://www.mapbox.com/developers/api/geocoding/
+  // http://api.tiles.mapbox.com/v4/geocode/mapbox.places/{...}.json?access_token=pk.eyJ1IjoiZGVlem9uZSIsImEiOiJ3bmdJcVlnIn0.AfQscey5bQGEwZIcsvaUBQ
 
-  
+  // Get access token, ensure it's a funciton value without carriage returns
+  $settings = file(dirname ( __FILE__ ) . '/settings.txt');
+  $access_token = str_replace("\n", '', $settings[0]);
+  $curl_Url = 'api.tiles.mapbox.com/v4/geocode/mapbox.places/' . $address . '.json?access_token=' . urlencode($access_token);
+
+  $ch = curl_init();
+  curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET');
+  curl_setopt($ch, CURLOPT_URL, $curl_Url);
+  curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+  curl_setopt($ch, CURLOPT_HTTPHEADER,
+    array(
+      'Content-type: application/json',
+      'Accept: application/json'
+    )
+  );
+
+  $json_result = curl_exec($ch);
+  $results[0] = json_decode( $json_result);
+  $results[1] = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+  if ($results[0] == FALSE) {
+    $error = curl_error($ch);
+  }
+
+  curl_close($ch);
+
+  // Write lat / long values to entity
+    // Check for more than one "feature" returned
+    // if (count($results[0]['features']) > 1)
+      // Provide warning, use value with highest number of contexts.
+
+  // Longitude: $results[0]['features'][0]->geometry->coordinates[0]
+  // Latitude: $results[0]['features'][0]->geometry->coordinates[1]
+
 }

@@ -1,4 +1,7 @@
 # Ignore configuration files that may contain sensitive information.
+# Secrets
+modules/custom/playpoi/settings.txt
+
 sites/*/*settings*.php
 
 # Ignore paths that contain generated content.
