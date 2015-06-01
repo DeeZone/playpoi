@@ -1,5 +1,5 @@
-# Schema for the configuration files of the Playpoi theme.
+# Schema for the configuration files of the Bartik theme.
 
-playpoi.settings:
+bartik.settings:
   type: theme_settings
-  label: 'Playpoi settings'
+  label: 'Bartik settings'

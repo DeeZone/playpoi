@@ -2,11 +2,11 @@
 
 /**
  * @file
- * Lists available colors and color schemes for the Playpoi theme.
+ * Lists available colors and color schemes for the Bartik theme.
  */
 
 // Put the logo path into JavaScript for the live preview.
-$js_attached['#attached']['drupalSettings']['color']['logo'] = theme_get_setting('logo.url', 'playpoi');
+$js_attached['#attached']['drupalSettings']['color']['logo'] = theme_get_setting('logo.url', 'bartik');
 drupal_process_attached($js_attached);
 
 $info = array(
@@ -119,6 +119,6 @@ $info = array(
   ),
 
   // Preview files.
-  'preview_library' => 'playpoi/color.preview',
+  'preview_library' => 'bartik/color.preview',
   'preview_html' => 'color/preview.html',
 );
