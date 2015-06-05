@@ -1,10 +1,12 @@
 name: Playpoi
 type: theme
 base theme: classy
-description: 'A flexible, recolorable theme with many regions and a responsive, mobile-first layout. Above all else a theme that ROCKS the poi community.'
-package: Custom
-version: 8.x-0.0.1-b7
+description: 'A flexible, recolorable theme with many regions and a responsive, mobile-first layout.'
+package: Core
+version: VERSION
 core: 8.x
+stylesheets-remove:
+  - '@classy/css/layout.css'
 libraries:
   - playpoi/global-styling
 ckeditor_stylesheets:
@@ -20,15 +22,17 @@ regions:
   page_top: 'Page top'
   page_bottom: 'Page bottom'
   highlighted: Highlighted
-  featured: Featured
+  featured_top: 'Featured top'
+  breadcrumb: Breadcrumb
   content: Content
   sidebar_first: 'Sidebar first'
   sidebar_second: 'Sidebar second'
-  triptych_first: 'Triptych first'
-  triptych_middle: 'Triptych middle'
-  triptych_last: 'Triptych last'
-  footer_firstcolumn: 'Footer first column'
-  footer_secondcolumn: 'Footer second column'
-  footer_thirdcolumn: 'Footer third column'
-  footer_fourthcolumn: 'Footer fourth column'
-  footer: Footer
+  featured_bottom_first: 'Featured bottom first'
+  featured_bottom_second: 'Featured bottom second'
+  featured_bottom_third: 'Featured bottom third'
+  footer_first: 'Footer first'
+  footer_second: 'Footer second'
+  footer_third: 'Footer third'
+  footer_fourth: 'Footer fourth'
+  footer_fifth: 'Footer fifth'
+

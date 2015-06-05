@@ -15,7 +15,7 @@
   text-align: center;
 }
 
-/* Override Playpois default blockquote and pre styles when captioned. */
+/* Override Bartik's default blockquote and pre styles when captioned. */
 .caption-pre > pre,
 .caption-blockquote > blockquote {
   margin: 0;
