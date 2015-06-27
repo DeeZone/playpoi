@@ -1,0 +1,6 @@
+name: playpoi_toolbox
+type: module
+description: Site specific utility customizations for playpoi.com
+core: 8.x
+package: Custom
+version: 8.0.1
