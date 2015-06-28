@@ -1,0 +1,19 @@
+<?php
+/**
+ * @File
+ * Custom module for PlayPoi.com specific utilities.
+ * @author Darren "Dee" Lee
+ */
+ 
+/**
+ * Implementing hook_menu().
+ */
+function playpoi_toolbox_menu() {
+  $items['/playpoi_toolbox/page'] = array(
+    'title' => 'PlayPoi test page',
+    'description' => 'This is a example PlayPoi page.',
+    'route' => 'playpoi_toolbox.playpoi_toolbox_default',
+  );
+
+  return $items;
+}
