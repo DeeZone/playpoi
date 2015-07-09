@@ -35,9 +35,15 @@ function playpoi_theme() {
 }
 
 /**
- * Implements hook_theme().
+ * Implements hook_entity_presave().
  */
+// function playpoi_entity_presave(EntityInterface $entity) {
 function playpoi_entity_update(EntityInterface $entity) {
+
+    echo '<pre>';
+    print_r($results[0]);
+    echo '</pre>';
+    exit;
 
   if ($entity->bundle() == 'festivals') {
 
