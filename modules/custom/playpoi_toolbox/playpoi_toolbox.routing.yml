@@ -1,0 +1,7 @@
+playpoi_toolbox.playpoi_toolbox_default:
+  path: '/playpoi_toolbox/page'
+  defaults:
+    _controller: '\Drupal\playpoi_toolbox\Controller\PlayPoiToolboxController::testPage'
+    _title: 'PlayPoi Toolbox'
+  requirements:
+    _permission: 'access content'
